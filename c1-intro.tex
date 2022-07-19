@@ -1,0 +1,262 @@
+\chapter{Introduction}
+\label{c1}
+
+\PARstart{T}{his}~chapter elaborates on the main concepts of this PhD project,
+setting the context of the research work 
+and describing the overall research design.
+
+%
+%
+%
+
+\section{Guidelines for the Introduction Chapter}
+\label{sec:c1:guidelines}
+
+You should shop around and look at theses that ask your supervisor for suggestions.
+That said, here is an example of how you can structure your thesis.
+You are likely to find that other theses from the group use similar structure.
+
+\begin{itemize}
+    \item Context
+    \item Research Design
+    \begin{itemize}
+        \item Problem Statement
+        \item Problem Decomposition
+        \item Research Methods
+    \end{itemize}
+    \item Thesis Overview
+\end{itemize}
+
+\subsection{Context}
+\label{sec:c1:context}
+
+The \textbf{context} should allow a reader to understand enough
+about the scientific field in order to be able to read the thesis.
+It is not necessary to describe all of CS or all of SE. Go from general
+(e.g. Software architecture) to specific (e.g. Technical Debt
+in Software Architecture). You may find it easier to break the context down
+into a sequence of sections.
+
+\subsection{Research Design}
+\label{sec:c1:rd}
+
+The \textbf{problem statement} section should include
+\begin{itemize}
+    \item the causes of the problem;
+    \item the problem itself, i.e. something that is wrong
+    or can be improved; and
+    \item the consequences of the problem
+\end{itemize}
+
+In the \textbf{problem decomposition}, a common problem
+with by-publication theses is that the papers may not perfectly reflect
+a coherent thread of research. It can be quite challenging to retro-fit
+what was done to a consistent set of research questions. One solution
+is to follow an established research framework like Wieringa's\footnote{
+    Note that Wieringa's publications on Design Science tend to change things
+    from year to year. A safe reference to consult is his book: R.J. Wieringa.
+    Design Science Methodology for Information Systems
+    and Software Engineering. Springer, 2014}
+\emph{design science} framework for presenting the problem decomposition
+in such thesis. Specifically, the problem decomposition
+can be structured as follows:
+
+\begin{itemize}
+    \item Start from the problem statement (usually in the previous section)
+    as the root of the decomposition tree.
+    \item Describe sequentially a number of specific research questions
+    that help to solve the problem statement. The research questions
+    can be grouped if it helps to understand them better (e.g. 3 phases:
+    understanding, exploring, contributing).
+    \item Each specific research question should be mapped
+    to exactly one chapter.
+    \item Each specific research question should be linked to the next one.
+    \begin{itemize}
+        \item The first one is usually ``what does this concept mean?''
+        \item The link to the next is found by asking: ``now that we know
+        the answer to this question, this leads us to ask the following \dots''
+    \end{itemize}
+    \item Do not go into the details of the solution or the answer
+    to the question. Only provide hints of the answer when linking questions
+    to each other.
+\end{itemize}
+
+The \textbf{research methods} section provides an overview
+of the empirical methods used in the thesis and a mapping of methods
+to thesis chapters.
+
+\subsection{Thesis Overview}
+\label{sec:c1:overview}
+
+The \textbf{thesis overview} section should
+\begin{itemize}
+    \item have the publications explicitly listed and mapped to thesis chapters;
+    \item have the contributions explicitly listed; and
+    \item explain what is your own contribution in papers with co-authors
+    other than your supervisor(s) (if applicable), e.g. ``In this work,
+    I took the lead in designing the proposed framework and the case study,
+    conducting the case study in industry,
+    performing data extraction and analysis, and writing the manuscript.''
+    You do not need to explain the contribution of those other co-authors.
+\end{itemize}
+
+%
+%
+%
+
+\section{\LaTeX{} Formatting}
+\label{sec:c1:latex}
+
+There are some great resources to help with \LaTeX,
+so this guide will not include general instructions.
+For those, consult the Latex Wikibook\footnote{\url{https://en.wikibooks.org/wiki/LaTeX}}
+and the excellent guidelines by \cite{spinellis:latexadvice}.
+
+That said, there are some small pointers that are particular to this template.
+These are mentioned in the subsection below.
+
+\subsection{References}
+\label{sec:c1:References}
+
+You may be used to write papers using numbered references (e.g. IEEE).
+You are free to stick to such reference model in the thesis if you want.
+However, this template uses \texttt{kluwer} (a style from the Harvard family),
+which is a more common style for books (like your thesis).
+If you want to use \texttt{kluwer}, you need to adjust your citations
+according to the type of citation:
+
+\vspace{0.5cm}
+\noindent
+\textbf{Indirect citation}
+
+You are probably used to cite sources indirectly in a sentence.
+For example, the code ``\verb|... in related work~\cite{source}|''
+would generate something like ``\dots in related work~[2].''
+To cite sources indirectly using styles like \texttt{kluwer},
+you must use the command \verb|\citep{source}| (notice the `p').
+The output will look as follows: \citep{spinellis:latexadvice},
+i.e. \texttt{author, year} between parentheses.
+
+\vspace{0.5cm}
+\noindent
+\textbf{Direct citation}
+
+When you make a direct citation, you are probably used to write
+the author manually and add an indirect citation. For example,
+``\texttt{according to Author et} \verb|al.~\cite{source}|.''
+To cite sources directly using styles like \texttt{kluwer},
+you must use the command \verb|\cite{source}| (without `p')
+and NOT add the author manually (this is done by the style).
+For example, ``\verb|according to \cite{source}|''
+will look as follows: ``according to \cite{spinellis:latexadvice}.''
+
+\subsection{Tables}
+\label{sec:c1:latex_tables}
+
+Avoid cumbersome table formatting (e.g. using vertical lines).
+In general, simpler is better.
+\Cref{tab:c1:simpleexample} and \Cref{tab:c1:multicolexample} are some examples.
+Also, look at the tables' source for code formatting tips.
+
+\begin{table} [h]
+    \caption{Example of a simple table (based on~\cite{spinellis:latexadvice})}
+    \label{tab:c1:simpleexample}
+    
+    \noindent
+    \centering
+    %\footnotesize%if needed
+
+    % put the header on a \parbox to center and break lines
+    \newcommand{\hb}[2]{\parbox[c][0.8cm][c]{#1}{\centering #2}}
+    
+    \begin{tabular}{lccccc}
+        \toprule
+        % Column labels (using separate lines to align label with data)
+        \hb{2cm}{Command\\and options}
+                & \hb{2cm}{Input\\requirements}
+                        & Matched
+                                & Connected
+                                        & Matched
+                                                & Connected \\
+        \midrule
+        tr -cs  & 1     & \X    & --    & \V    & 1 \\
+        sort w  & 0     &       & --    & \X    & 0 \\
+        fmt     & 1     & \X    & --    & \V    & 1 \\
+        tr A-Z  & 1     & \V    & 1     &       & 1 \\
+        sort -u & fmt   & \X    & --    & \V    & 1 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{table} [h]
+    \caption{Example of multi-column table}
+    \label{tab:c1:multicolexample}
+    
+    \noindent
+    \centering
+    
+    \begin{tabular}{lSSSS}
+        \toprule
+        {}                & \multicolumn{2}{c}{\textbf{Group 1}} 
+                                                    & \multicolumn{2}{c}{\textbf{Group 2}} \\
+                            \cmidrule(r){2-3}         \cmidrule(r){4-5}
+        {}                & {Average}  & {Max}      & {Average}   & {Max} \\
+        \midrule
+        \textbf{Factor 1} &   853      &  2443      &   1760      &   3799      \\
+        \textbf{Factor 2} & 14983      & 74658      & 110881      & 316552      \\
+        \textbf{Factor 3} &    18      &    85      &     89      &    319      \\
+        \textbf{Rate}     &    51.91\% &    86.34\% &     44.44\% &     81.08\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Figures}
+\label{sec:c1:latex_figures}
+
+The main tips in a nutshell are as follows.
+\begin{itemize}
+    \item Put all your figures inside the \texttt{figs} folder,
+          and use subfolders to organize them per chapter.
+    \item Prefer vectorized images (e.g. PS or PDF).
+          Bear in mind that saving a PNG or JPG as PDF
+          will not vectorize your image.
+\end{itemize}
+
+See \Cref{fig:c1:simpleexample} for a simple example.
+\Cref{fig:c1:allauthors} shows an example using sub-figures.
+Notice that you can also cite them individually
+(see \Cref{fig:c1:auth1}, \Cref{fig:c1:auth2} and \Cref{fig:c1:auth3}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.2\textwidth]{figs/cv/author}
+    \caption{A figure example}
+    \label{fig:c1:simpleexample}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/cv/author}
+        \caption{Author 1}
+        \label{fig:c1:auth1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/cv/author}
+        \caption{Author 2}
+        \label{fig:c1:auth2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/cv/author}
+        \caption{Author 3}
+        \label{fig:c1:auth3}
+    \end{subfigure}
+       \caption{All authors}
+       \label{fig:c1:allauthors}
+\end{figure}

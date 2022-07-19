@@ -1,0 +1,108 @@
+\renewcommand{\publicationhead}{\flushleft\footnotesize{
+    Based on:\\[0.1cm]% see other possible headers in the notes below
+    Author List, 
+    (YEAR)
+    \textit{``Paper Title,''} 
+    in Venue, other fields,
+    DOI:99.9999/thedoi.9999\\[0.1cm]
+}}
+
+\chapter{Content Chapters}% paper title
+\label{c2}
+
+\begin{chapterabstract}
+    The abstract of you paper goes here.
+\end{chapterabstract}
+
+
+\section{Paper Sections}% sections as in the paper
+\label{sec:c2:intro}% hierarchical labels avoid clashes between chapters
+
+In each of the content chapters:
+
+\begin{itemize}
+    \item If chapters are included as the original publications,
+    you can put the ``published as'' note. If you have made some changes
+    (e.g. removing background section because it has already been included
+    in a previous chapter or removing future work), you can use ``Based on.''
+    If chapters contain two or more papers then you can say
+    something like ``Parts of this chapter are based on \dots'' or
+    ``Parts of this chapter have been published as.'' Subsequently,
+    abstracts and sections should be merged. If a chapter expands on
+    a published short paper (e.g. that originates from a long paper
+    which was accepted as short) the note should again be ``Based on.''
+    
+    \item Make the whole work coherent:
+    \begin{itemize}
+        \item Remove redundant text from the introduction. Note that
+        redundancies in other sections (e.g. Related Work) can be kept
+        as they are often used to compare to the work presented
+        in the current chapter.
+        \item Have a common set of references for the whole thesis.
+        Merge `.bib' entries with different keys containing details
+        for the same reference.
+    \end{itemize}
+
+    \item Expressions that refer to the papers per se like ``in this paper''
+    should be adjusted towards the thesis e.g. ``in this chapter.''
+
+    \item The acknowledgments to people (but not to funding sources)
+    from original papers can remain at each chapter.
+    
+    \item References to own publications that are also part of the thesis
+    should be replaced by references to the respective chapters in the thesis
+    (note: this does not hold for the introduction).
+
+    \item Particularly in chapters containing papers that were published
+    early in the PhD project it may make sense to add additional references
+    and remarks pointing to other chapters.
+    
+    \item The conclusions/future work sub-section should be limited
+    to conclusions, i.e. future work should not appear here.
+    Here is what you do with future work:
+    \begin{itemize}
+        \item Future work that has already been completed and reported
+        in other chapters should point to those chapters, e.g.
+        ``The framework that is reported in this chapter has been extended
+        with an additional viewpoint that relates decisions to forces
+        (see Chapter N)''.
+        \item Future work that is uncompleted should be moved
+        to the conclusions chapter of the thesis, together with
+        that of the rest of the content chapters
+        (see notes on the conclusion chapter).
+    \end{itemize}
+    
+    \item It is advisable at the very end of the chapter to include a segue
+    for the next chapter, e.g. ``In this chapter we learned X,
+    so it is natural to ask Y in the next chapter.''
+    
+    \item Particularly for conference papers, the authors usually get
+    additional feedback after the paper presentations,
+    which could not be considered in the paper version for the proceedings.
+    It is a good practice to work on this feedback and revise the papers
+    accordingly in the thesis.
+\end{itemize}
+
+\noindent
+\textbf{Appendices}
+
+The appendices of all chapters should be moved to the end of the thesis.
+This increases the readability of the main body of the thesis.
+You can also separate appendices according to the chapter they originated from
+(e.g. appendices 1--5 belong to chapter 3
+while appendices 6--8 belong to chapter 5).
+
+\vspace{0.5cm}
+\noindent
+\textbf{References}
+
+When merging the references for the thesis,
+make sure you do not create duplicated references
+by citing the same source using different bibtex keys
+(this is a VERY common mistake). Also, make sure that
+\begin{itemize}
+    \item the references are complete and correct,
+    \item all papers or books are referenced in the latest edition
+          in all chapters, and
+    \item all internet sources are still available.
+\end{itemize}

@@ -1,0 +1,2 @@
+#! /bin/sh
+docker run -i --rm --name latex -v "$PWD":/usr/src/app -w /usr/src/app registry.gitlab.com/islandoftex/images/texlive:latest /bin/bash -c "latexmk -pdf -pdflatex=\"pdflatex -interactive=nonstopmode\" thesis.tex ; latexmk -pdf -pdflatex=\"pdflatex -interactive=nonstopmode\" thesis.tex ; latexmk -pdf -pdflatex=\"pdflatex -interactive=nonstopmode\" stellingen.tex ; rm *.aux *.lot *.out *.soc *.bbl *.blg *.toc *.fls *.loc *.lof *.log *.fdb_latexmk"

@@ -1,0 +1,179 @@
+\documentclass[10pt]{searchthesis}%,makeidx
+%%% For an A4 format, use there options instead
+%\documentclass[12pt,makeidx]{phdthesis}
+%\usepackage{a4wide}
+
+%
+% PACKAGES
+%
+
+%%% Fonts & Symbols
+\usepackage{palatino}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbding}
+
+%%% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+%%% Language support
+\usepackage[english, dutch]{babel}
+
+%%% Document elements
+\usepackage{acronym}
+\usepackage{appendix}
+\usepackage{fancyhdr}
+
+%%% Floats
+\usepackage{booktabs}% table environment
+\usepackage{multirow}% multi-row in tables
+\usepackage{multicol}% multi-column in tables
+\usepackage{longtable}% multi-page tables
+\usepackage{graphicx}
+\usepackage{wrapfig}% for the CV photo
+\usepackage[font={small}]{caption}
+\usepackage{subcaption}
+
+%%% Formatting
+\usepackage[round]{natbib}
+\usepackage[resetlabels]{multibib}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{epigraph}
+
+\usepackage[table,dvipsnames,svgnames,x11names]{xcolor}
+
+%%% Page formatting
+% \usepackage{lscape}
+% \usepackage{setspace}
+% \usepackage{afterpage}
+% \usepackage{chngpage} %change margin to fit table
+% \usepackage{framed}
+
+
+%
+% CONFIGS, MACROS, COMMANDS & ENVIRONMENTS
+%
+
+%%% Table column types
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\X}{\XSolidBrush{}}
+\newcommand{\V}{\Checkmark{}}
+
+\pdfcompresslevel=0
+
+%
+% CONTENT
+%
+
+\begin{document}
+
+% Uncomment this for the digital distribution version
+% (i.e. with the front of the cover)
+\include{c0-coverpage}
+
+\include{c0-titlepage}
+
+% Not required but nice to have
+\include{c0-work_and_funding}
+
+% Not required but nice to have
+\include{c0-dedication}
+
+% English Abstract
+\include{c0-abstract}
+
+% Ducth Abtract
+\include{c0-abstract_nl}
+
+
+\begingroup
+	%%% Table of Contents
+	\cleardoublepage
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	
+	%%% Acknowledgements
+	\cleardoublepage
+	\include{c0-acknowledgements}
+	\newpage
+	
+	%%% List of Figures
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+	\newpage
+	
+	%%% List of Tables
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+	\newpage
+\endgroup
+
+
+%
+% CHAPTERS
+%
+
+\pagenumbering{arabic}
+\setcounter{page}{0}
+
+% Introduction
+\include{c1-intro}
+
+% Paper 1 - Title
+\include{c2-paper1}
+
+% . Add other content chapters here
+% .
+% .
+
+% Summary
+\include{c9-conclusions}
+
+%
+% Appendices (comment if not needed)
+%
+
+\appendix
+
+\include{ca1-paper1}
+
+% . Add other appendices
+% .
+% .
+
+%
+% BIBLIOGRAPHY
+%
+
+\small
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{kluwer-with-doi}
+\bibliography{thesis-citations}
+
+%
+% EXTRA AUTHOR INFORMATION (optional)
+%
+
+% Pulications, events and reviews
+\include{cx-activities}
+
+% CV
+\include{cx-cv}
+
+\end{document}
