@@ -77,3 +77,9 @@ Provide any feedback related to these guidelines and the template by:
 - opening an issue in the repository;
 - submitting a pull-request or
 - messaging your supervisor.
+
+## License
+
+The logo of the University of Groningen at [figs/rugr_logoen_zwart_cmyk.eps] is distributed in this repository for convenience but it is a trademark of and [managed by the University of Groningen](https://www.rug.nl/about-ug/practical-matters/huisstijl/).
+
+Unless otherwise noted, the remaining content in this repository is licensed under a [Creative Commons Zero License](https://creativecommons.org/publicdomain/zero/1.0/), also known as Public Domain Dedication. That said, attribution is appreciated.
