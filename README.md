@@ -6,20 +6,18 @@ Forms of PhD theses:
   - actual camera-ready copies of publications combined into 1 document
 - monograph: may contain publications but is orthogonal to them
 
-Especially in the first case, the thesis should be corrected according to the 
-
 Especially in the first case, the thesis should be corrected
 according to the reading committee's comments, even if it concerns parts
 that have been peer-reviewed and published.
 
 The following are general guidelines for by-publication theses.
 Of course each PhD student should tune these guidelines
-according to hes/hir individual thesis.
+according to her/his individual thesis.
 
 ## Before you Begin
 
 Have a look at **other dissertations** and follow practices that you like.
-A recommended thesis to use as a good structure and as an example
+A recommended thesis from the group to use as a good structure and as an example
 is from [Uwe van Heesch](https://research.rug.nl/en/publications/architecture-decisions-the-next-step).
 
 ## Bear in mind
@@ -77,5 +75,5 @@ are solved already. Adding your content should be fairly straightforward
 
 Provide any feedback related to these guidelines and the template by:
 - opening an issue in the repository;
-- submitting a commit; or
+- submitting a pull-request or
 - messaging your supervisor.
