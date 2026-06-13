@@ -1,5 +1,7 @@
 # Writing PhD Dissertations
 
+> **Acknowledgement:** The process and tips below were crafted by [Paris Avgeriou](https://www.cs.rug.nl/~paris/) amd improved over the years with the support of his former PhD candidates.
+
 Forms of PhD theses:
 - by-publication: two main types
   - re-editing of publications;
